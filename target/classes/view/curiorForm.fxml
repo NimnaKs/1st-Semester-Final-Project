@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="800.0" prefWidth="990.0" style="-fx-background-color: #080C25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.posm.controller.CuriorForm">
+   <children>
+      <Line endX="851.0" layoutX="118.0" layoutY="124.0" startX="-100.0" stroke="WHITE" />
+      <Label alignment="BOTTOM_CENTER" layoutX="682.0" layoutY="40.0" prefHeight="56.0" prefWidth="286.0" text="Curior Service" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="230.0" prefHeight="25.0" prefWidth="59.0" text="Mail Id  " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="760.0" layoutY="705.0" onAction="#onActionSave" prefHeight="33.0" prefWidth="180.0" style="-fx-background-color: #b51313;" text="Save " textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="searchBtn" layoutX="800.0" layoutY="150.0" onAction="#onActionSearch" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Search">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="100.0" layoutY="310.0" prefHeight="25.0" prefWidth="85.0" text="Send Date " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="535.0" layoutY="230.0" prefHeight="25.0" prefWidth="78.0" text="Mail Type" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="mailId" layoutX="259.0" layoutY="230.0" prefHeight="26.0" prefWidth="119.0" textFill="#278d7f">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="194.0" prefHeight="25.0" prefWidth="175.0" text="Mails Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="275.0" prefHeight="25.0" prefWidth="203.0" text="Senders Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="340.0" prefHeight="25.0" prefWidth="119.0" text="Senders Name " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="373.0" prefHeight="25.0" prefWidth="142.0" text="Senders Address" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="535.0" layoutY="275.0" prefHeight="25.0" prefWidth="203.0" text="Recivers Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="535.0" layoutY="340.0" prefHeight="25.0" prefWidth="153.0" text="Recievers Tele No" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="535.0" layoutY="310.0" prefHeight="25.0" prefWidth="129.0" text="Recievers Name " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="570.0" prefHeight="25.0" prefWidth="203.0" text="Delivery Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="605.0" prefHeight="25.0" prefWidth="190.0" text="Delivery Postman Name" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="640.0" prefHeight="25.0" prefWidth="142.0" text="Delivered Date" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="todayParcelDetails" buttonType="RAISED" layoutX="320.0" layoutY="705.0" onAction="#onActionTodayParcelDetails" prefHeight="33.0" prefWidth="180.0" style="-fx-background-color: #278d7f;" text="Today Parcel Details" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="senderName" layoutX="260.0" layoutY="328.0" onKeyReleased="#onActionSendersNameCheck" prefHeight="25.0" prefWidth="246.0" styleClass="txtField" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <Label fx:id="deliveredDate" layoutX="380.0" layoutY="640.0" prefHeight="26.0" prefWidth="102.0" textFill="#278d7f">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="senderAddress" layoutX="260.0" layoutY="361.0" onKeyReleased="#onActionSendersAddressCheck" prefHeight="25.0" prefWidth="246.0" styleClass="txtField" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="customerName" layoutX="687.0" layoutY="441.0" onKeyReleased="#onActionCustomerNameCheck" prefHeight="25.0" prefWidth="258.0" styleClass="txtField" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <Label layoutX="100.0" layoutY="457.0" prefHeight="25.0" prefWidth="129.0" text="Customer Id" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="495.0" prefHeight="25.0" prefWidth="153.0" text="Customer Tele No" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="535.0" layoutY="455.0" prefHeight="25.0" prefWidth="132.0" text="Customer Name" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="535.0" layoutY="495.0" prefHeight="25.0" prefWidth="59.0" text="Weight" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="418.0" prefHeight="25.0" prefWidth="181.0" text="Parcel Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="529.0" prefHeight="25.0" prefWidth="44.0" text="Price" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="100.0" layoutY="705.0" onAction="#onActionCuriorDetails" prefHeight="33.0" prefWidth="180.0" style="-fx-background-color: #3498db;" text="Curior Details" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="535.0" layoutY="377.0" prefHeight="25.0" prefWidth="153.0" text="Recievers Address" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="receiversName" layoutX="689.0" layoutY="298.0" onKeyReleased="#onActionReceiversNameCheck" prefHeight="25.0" prefWidth="246.0" styleClass="txtField" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="recieversTeleNo" layoutX="690.0" layoutY="329.0" onKeyReleased="#onActionReceiversTpCheck" prefHeight="25.0" prefWidth="246.0" styleClass="txtField" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="receiversAddress" layoutX="690.0" layoutY="363.0" onAction="#onActionGetPostManName" onKeyReleased="#onActionReceiversAddressCheck" prefHeight="25.0" prefWidth="246.0" styleClass="txtField" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="customerTeleNo" layoutX="270.0" layoutY="484.0" onKeyReleased="#onActionCustomerTpCheck" prefHeight="25.0" prefWidth="240.0" styleClass="txtField" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="weight" layoutX="686.0" layoutY="480.0" onAction="#onActionGetPrice" onKeyReleased="#onActionWeightCheck" prefHeight="25.0" prefWidth="258.0" styleClass="txtField" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="RemoveBtn" buttonType="RAISED" layoutX="540.0" layoutY="705.0" onAction="#onActionRemove" prefHeight="33.0" prefWidth="180.0" style="-fx-background-color: #576CBC;" text="Remove" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="newId" buttonType="RAISED" layoutX="403.0" layoutY="454.0" onAction="#newIdBtn" prefHeight="24.0" prefWidth="88.0" style="-fx-background-color: #2ecc71;" text="New Id +" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="customerIdComboBox" layoutX="264.0" layoutY="439.0" onAction="#onActionGetCustomerDetails" prefHeight="40.0" prefWidth="124.0" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <styleClass>
+            <String fx:value="combo-box" />
+            <String fx:value="list-cell" />
+         </styleClass></JFXComboBox>
+      <TextField fx:id="mailEnteredTextBox" layoutX="97.0" layoutY="148.0" prefHeight="26.0" prefWidth="683.0" promptText="Enter Mail Id" style="-fx-background-radius: 20;">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="50.0" fitWidth="190.0" layoutX="23.0" layoutY="38.0">
+         <image>
+            <Image url="@../assert/TimeStamp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dateAndTime" layoutX="29.0" layoutY="44.0" prefHeight="41.0" prefWidth="177.0" style="-fx-background-color: #171821; -fx-background-radius: 5; -fx-alignment: Center;" text="Thurstday 16:01" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comboBoxMailType" layoutX="684.0" layoutY="212.0" onAction="#onActionMailType" prefHeight="25.0" prefWidth="246.0" stylesheets="@../style/curiorDetailsFormStyle.css">
+         <styleClass>
+            <String fx:value="combo-box" />
+            <String fx:value="list-cell" />
+         </styleClass>
+      </JFXComboBox>
+      <Label fx:id="sendDate" layoutX="260.0" layoutY="313.0" prefHeight="26.0" prefWidth="102.0" textFill="#278d7f">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="price" layoutX="270.0" layoutY="526.0" prefHeight="26.0" prefWidth="119.0" textFill="#278d7f">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="postManName" layoutX="380.0" layoutY="605.0" prefHeight="26.0" prefWidth="266.0" textFill="#278d7f">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

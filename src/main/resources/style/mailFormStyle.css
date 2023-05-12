@@ -1,0 +1,11 @@
+.txtField{
+    -fx-text-fill: #278d7f;
+}
+
+.combo-box > .list-cell {
+    -fx-text-fill:  #278d7f;
+    -fx-alignment: center-left;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial";
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="800.0" prefWidth="990.0" style="-fx-background-color: #080C25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.posm.controller.AddPostman">
+   <children>
+      <Line endX="851.0" layoutX="118.0" layoutY="124.0" startX="-100.0" stroke="WHITE" />
+      <Label alignment="BOTTOM_CENTER" layoutX="745.0" layoutY="40.0" prefHeight="56.0" prefWidth="223.0" text="Employee" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="206.0" prefHeight="25.0" prefWidth="65.0" text="Post Id" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="248.0" prefHeight="25.0" prefWidth="132.0" text="Employee Name" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="150.0" prefHeight="25.0" prefWidth="142.0" text="Profile Details" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="381.0" prefHeight="25.0" prefWidth="203.0" text="Contact Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="455.0" prefHeight="25.0" prefWidth="94.0" text="Contact No" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="554.0" prefHeight="25.0" prefWidth="79.0" text="Post Area" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="508.0" prefHeight="25.0" prefWidth="203.0" text="Vehicle Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="590.0" prefHeight="25.0" prefWidth="94.0" text="Vehicle No" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="627.0" prefHeight="25.0" prefWidth="106.0" text="Vehicle Type" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="420.0" prefHeight="25.0" prefWidth="132.0" text="Email Address" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="273.0" layoutY="289.0" prefHeight="25.0" prefWidth="132.0" text="Employee Image" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="100.0" layoutY="190.0" prefHeight="147.0" prefWidth="156.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="imgView" fitHeight="155.0" fitWidth="155.0">
+               <image>
+                  <Image url="@../assert/Employeee.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="482.0" layoutY="703.0" onAction="#onActionSave" prefHeight="33.0" prefWidth="380.0" style="-fx-background-color: #b51313;" text="Save " textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="89.0" layoutY="703.0" onAction="#onActionBack" prefHeight="33.0" prefWidth="380.0" style="-fx-background-color: #278d7f;" text="Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="postId" layoutX="436.0" layoutY="206.0" prefHeight="26.0" prefWidth="119.0" text="Post001" textFill="#278d7f">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="vehicleType" layoutX="366.0" layoutY="616.0" onAction="#onActionCheckVehicleType" prefHeight="27.0" prefWidth="448.0" stylesheets="@../style/addPostMan.css">
+         <styleClass>
+            <String fx:value="combo-box" />
+            <String fx:value="list-cell" />
+         </styleClass></JFXComboBox>
+      <JFXTextField fx:id="employeeName" layoutX="437.0" layoutY="240.0" onKeyReleased="#onActionCheckEmployeeName" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/addPostMan.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="employeeImg" layoutX="435.0" layoutY="282.0" onAction="#onActionSetImg" onKeyReleased="#onActionCheckEmployeeImg" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/addPostMan.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="emailAddress" layoutX="382.0" layoutY="404.0" onKeyReleased="#onActionCheckEmail" prefHeight="32.0" prefWidth="447.0" styleClass="txtField" stylesheets="@../style/addPostMan.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="contactNo" layoutX="380.0" layoutY="445.0" onKeyReleased="#onActionCheckTp" prefHeight="32.0" prefWidth="447.0" styleClass="txtField" stylesheets="@../style/addPostMan.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="postArea" layoutX="371.0" layoutY="547.0" onKeyReleased="#onActionCheckPostArea" prefHeight="32.0" prefWidth="447.0" styleClass="txtField" stylesheets="@../style/addPostMan.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="vehicleNo" layoutX="370.0" layoutY="584.0" onKeyReleased="#onActionVehicleNo" prefHeight="32.0" prefWidth="447.0" styleClass="txtField" stylesheets="@../style/addPostMan.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <ImageView fitHeight="50.0" fitWidth="190.0" layoutX="22.0" layoutY="38.0">
+         <image>
+            <Image url="@../assert/TimeStamp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dateAndTime" layoutX="28.0" layoutY="44.0" prefHeight="41.0" prefWidth="177.0" style="-fx-background-color: #171821; -fx-background-radius: 5; -fx-alignment: Center;" text="Thurstday 16:01" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="800.0" prefWidth="990.0" style="-fx-background-color: #080C25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.posm.controller.CuriorDetailsForm">
+   <children>
+      <Line endX="851.0" layoutX="118.0" layoutY="124.0" startX="-100.0" stroke="WHITE" />
+      <Label alignment="BOTTOM_CENTER" layoutX="667.0" layoutY="40.0" prefHeight="56.0" prefWidth="301.0" text="Curior Service" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="41.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="132.0" layoutY="411.0" prefHeight="280.0" prefWidth="724.0" style="-fx-background-color: #080C25;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="723.0">
+               <children>
+                  <TableView fx:id="parcelTable" onMouseClicked="#onMouseClicked" prefHeight="286.0" prefWidth="725.0" stylesheets="@../style/curiorFormStyle.css">
+                    <columns>
+                      <TableColumn fx:id="colWeightId" prefWidth="176.0" text="Weight Id" />
+                      <TableColumn fx:id="colType" prefWidth="195.0" text="Type" />
+                        <TableColumn fx:id="colDescription" prefWidth="176.0" text="Description " />
+                        <TableColumn fx:id="colPrice" prefWidth="172.0" text="Price" />
+                    </columns>
+                     <styleClass>
+                        <String fx:value="track" />
+                        <String fx:value="thumb" />
+                        <String fx:value="table-view" />
+                        <String fx:value="table-row-cell" />
+                        <String fx:value="scroll-bar" />
+                        <String fx:value="list-cell" />
+                        <String fx:value="label" />
+                        <String fx:value="increment-button" />
+                        <String fx:value="filler" />
+                        <String fx:value="decrement-button" />
+                     </styleClass>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="129.0" layoutY="221.0" prefHeight="25.0" prefWidth="47.0" text="Type" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="256.0" prefHeight="25.0" prefWidth="94.0" text="Description" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="294.0" prefHeight="25.0" prefWidth="47.0" text="Price" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="132.0" layoutY="356.0" onAction="#onActionSave" prefHeight="33.0" prefWidth="724.0" style="-fx-background-color: #b51313;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="description" layoutX="393.0" layoutY="246.0" onKeyReleased="#onActionCheckDescription" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/curiorFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="price" layoutX="393.0" layoutY="283.0" onKeyReleased="#onActionCheckPrice" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/curiorFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <Label layoutX="124.0" layoutY="170.0" prefHeight="25.0" prefWidth="179.0" text="Curior Information" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="back" buttonType="RAISED" layoutX="477.0" layoutY="713.0" onAction="#onActionBack" prefHeight="33.0" prefWidth="380.0" style="-fx-background-color: #278d7f;" text="Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="50.0" fitWidth="190.0" layoutX="23.0" layoutY="38.0">
+         <image>
+            <Image url="@../assert/TimeStamp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dateAndTime" layoutX="29.0" layoutY="44.0" prefHeight="41.0" prefWidth="177.0" style="-fx-background-color: #171821; -fx-background-radius: 5; -fx-alignment: Center;" text="Thurstday 16:01" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="parcelType" layoutX="393.0" layoutY="209.0" onAction="#onActionCheckType" prefHeight="33.0" prefWidth="396.0" styleClass="combo-box" stylesheets="@../style/curiorFormStyle.css" />
+   </children>
+</AnchorPane>

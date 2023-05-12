@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #080C25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.posm.controller.DashBoardControlForm">
+   <children>
+      <Line endX="88.94168090820312" endY="-22.673072814941406" layoutX="200.0" layoutY="48.0" opacity="0.2" startX="88.94171142578125" startY="725.22119140625" stroke="WHITE" strokeType="OUTSIDE">
+         <effect>
+            <BoxBlur width="2.5" />
+         </effect>
+      </Line>
+      <ImageView fitHeight="112.0" fitWidth="232.0" layoutX="8.0" layoutY="7.0">
+         <image>
+            <Image url="@../assert/ReviewBackground.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="dashboard" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="144.0" onAction="#onActiondashboardLoad" prefHeight="51.0" prefWidth="286.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/Dashboard.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="product" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="195.0" onAction="#onActionproduct" prefHeight="51.0" prefWidth="285.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Product" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/product.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="order" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="246.0" onAction="#onActionOrder" prefHeight="51.0" prefWidth="284.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Order" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/ShoppingCart.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="mails" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="297.0" onAction="#onActionMails" prefHeight="51.0" prefWidth="288.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Mails" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/Mail.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="curior" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="348.0" onAction="#onActionCurior" prefHeight="51.0" prefWidth="287.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Curior" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/Curior.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="utilityBills" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="399.0" onAction="#onActionUtilityBills" prefHeight="51.0" prefWidth="286.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Utility Bills" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/Bill.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="currencyStore" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="450.0" onAction="#onActionCurrencyStore" prefHeight="51.0" prefWidth="287.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Currency Store" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/MoneyGrap.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="MoneyTransfer" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="501.0" onAction="#onActionMonetTransfer" prefHeight="51.0" prefWidth="289.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Money Transfer" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="38.0" fitWidth="36.0">
+               <image>
+                  <Image url="@../assert/Dollar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="employee" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="552.0" onAction="#onActionEmployee" prefHeight="51.0" prefWidth="286.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Employee" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/Employee.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="settings" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="603.0" onAction="#onActionSettings" prefHeight="51.0" prefWidth="286.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/Settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="signout" alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="50.0" layoutY="654.0" onAction="#onActionSignOut" prefHeight="51.0" prefWidth="285.0" ripplerFill="#0654e2" stylesheets="@../style/dashBoardFormStyle.css" text="SignOut" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="34.0">
+               <image>
+                  <Image url="@../assert/Signout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="root" layoutX="289.0" layoutY="110.0" prefHeight="800.0" prefWidth="1011.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="289.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

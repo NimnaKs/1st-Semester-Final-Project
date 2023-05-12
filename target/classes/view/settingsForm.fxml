@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="800.0" prefWidth="990.0" style="-fx-background-color: #080C25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.posm.controller.SettingsForm">
+   <children>
+      <Line endX="851.0" layoutX="118.0" layoutY="124.0" startX="-100.0" stroke="WHITE" />
+      <Label alignment="BOTTOM_CENTER" layoutX="800.0" layoutY="40.0" prefHeight="56.0" prefWidth="168.0" text="Settings" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="200.0" prefHeight="25.0" prefWidth="111.0" text="User Type" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="updateDetails" buttonType="RAISED" layoutX="99.0" layoutY="505.0" onAction="#onActionUpdate" prefHeight="33.0" prefWidth="255.0" style="-fx-background-color: #b51313;" text="Update Details" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="100.0" layoutY="280.0" prefHeight="25.0" prefWidth="85.0" text="User Name" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="240.0" prefHeight="25.0" prefWidth="132.0" text="User Id" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="jobRoll" layoutX="382.0" layoutY="200.0" prefHeight="26.0" prefWidth="78.0" text="Manager" textFill="#278d7f">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="150.0" prefHeight="25.0" prefWidth="142.0" text="Profile Details" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="315.0" prefHeight="25.0" prefWidth="146.0" text="Employee Name" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="365.0" prefHeight="25.0" prefWidth="203.0" text="Contact Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="455.0" prefHeight="25.0" prefWidth="94.0" text="Contact No" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="415.0" prefHeight="25.0" prefWidth="45.0" text="Email" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="changePassword" buttonType="RAISED" layoutX="92.0" layoutY="708.0" onAction="#onActionChangePassword" prefHeight="33.0" prefWidth="273.0" style="-fx-background-color: #278d7f;" text="Change Password" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="employeeName" layoutX="382.0" layoutY="307.0" onKeyReleased="#onActionCheckEmployeeName" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/settingsStyle.css">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font></JFXTextField>
+      <Label layoutX="100.0" layoutY="560.0" prefHeight="25.0" prefWidth="218.0" text="Password Infomations" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="605.0" prefHeight="25.0" prefWidth="142.0" text="Current Password" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="651.0" prefHeight="25.0" prefWidth="142.0" text="New Password" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="newPW" layoutX="385.0" layoutY="643.0" onKeyReleased="#showPasswordNewOnAction" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/settingsStyle.css">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="addUser" buttonType="RAISED" layoutX="506.0" layoutY="705.0" onAction="#onActionAddUser" prefHeight="33.0" prefWidth="273.0" style="-fx-background-color: #3498DBFF;" text="Add User" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="userId" layoutX="382.0" layoutY="234.0" prefHeight="26.0" prefWidth="78.0" text="E001" textFill="#278d7f">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="userName" layoutX="381.0" layoutY="260.0" onKeyReleased="#onActionCheckUserName" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/settingsStyle.css">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="currentPw" layoutX="385.0" layoutY="594.0" onKeyReleased="#showPassWordOnAction" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/settingsStyle.css">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="contactNo" layoutX="383.0" layoutY="439.0" onKeyReleased="#onActionCheckTp" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/settingsStyle.css">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="emailAddress" layoutX="380.0" layoutY="396.0" onKeyReleased="#onActionCheckEmail" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/settingsStyle.css">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="50.0" fitWidth="190.0" layoutX="23.0" layoutY="38.0">
+         <image>
+            <Image url="@../assert/TimeStamp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dateAndTime" layoutX="29.0" layoutY="44.0" prefHeight="41.0" prefWidth="177.0" style="-fx-background-color: #171821; -fx-background-radius: 5; -fx-alignment: Center;" text="Thurstday 16:01" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="currentPWPF" layoutX="385.0" layoutY="599.0" onKeyReleased="#onActionHidePassword" prefHeight="25.0" prefWidth="396.0" />
+      <JFXPasswordField fx:id="newPasswordPWPF" layoutX="385.0" layoutY="647.0" onKeyReleased="#hidePasswordNewOnAction" prefHeight="25.0" prefWidth="396.0" />
+      <Label fx:id="lblEyeClose" layoutX="796.0" layoutY="592.0" onMouseClicked="#close_eye_clickedCurrentPassword" prefHeight="27.0" prefWidth="34.0" style="-fx-background-color: #fff;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../assert/eyeClose.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="lblEyeOpen" layoutX="799.0" layoutY="591.0" onMouseClicked="#open_eye_clickedCurrentPassword" prefHeight="19.0" prefWidth="22.0" style="-fx-background-color: #fff;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="28.0">
+               <image>
+                  <Image url="@../assert/eyeOpen.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="lblEyeClose1" layoutX="796.0" layoutY="644.0" onMouseClicked="#close_eye_clickedNewPassword" prefHeight="27.0" prefWidth="34.0" style="-fx-background-color: #fff;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../assert/eyeClose.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="lblEyeOpen1" layoutX="798.0" layoutY="646.0" onMouseClicked="#open_eye_clickedNewPassword" prefHeight="19.0" prefWidth="22.0" style="-fx-background-color: #fff;">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="28.0">
+               <image>
+                  <Image url="@../assert/eyeOpen.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="userNameLabel" layoutX="380.0" layoutY="285.0" prefHeight="30.0" prefWidth="531.0" text="User Name should start with posm and then @ and then 5 letter word or Repeat One" textFill="#c94b4b">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="userPasswordError" layoutX="384.0" layoutY="668.0" prefHeight="30.0" prefWidth="539.0" text="User Name should start with posm and then @ and then 5 digit word and Repeat One" textFill="#c94b4b">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

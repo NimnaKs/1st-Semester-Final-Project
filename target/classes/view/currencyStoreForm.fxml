@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="800.0" prefWidth="990.0" style="-fx-background-color: #080C25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.posm.controller.CurrencyStoreForm">
+   <children>
+      <Line endX="851.0" layoutX="118.0" layoutY="124.0" startX="-100.0" stroke="WHITE" />
+      <Label alignment="BOTTOM_CENTER" layoutX="667.0" layoutY="40.0" prefHeight="56.0" prefWidth="301.0" text="Currency Store" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="41.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="132.0" layoutY="411.0" prefHeight="298.0" prefWidth="724.0" style="-fx-background-color: #080C25;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="723.0">
+               <children>
+                  <TableView fx:id="currencyStoreTable" onMouseClicked="#onActionUpdateRow" prefHeight="286.0" prefWidth="725.0" stylesheets="@../style/currencyStoreFormStyle.css">
+                    <columns>
+                      <TableColumn fx:id="colMoneyType" prefWidth="176.0" text="Money Type" />
+                      <TableColumn fx:id="colUnitSellingPrice" prefWidth="195.0" text="Unit Selling Price" />
+                        <TableColumn fx:id="colUnitGettingPrice" prefWidth="176.0" text="Unit Getting Price" />
+                        <TableColumn fx:id="colQtyOnHand" prefWidth="172.0" text="Quantity on hand" />
+                    </columns>
+                     <styleClass>
+                        <String fx:value="cell" />
+                        <String fx:value="track" />
+                        <String fx:value="thumb" />
+                        <String fx:value="table-view" />
+                        <String fx:value="table-row-cell" />
+                        <String fx:value="scroll-bar" />
+                        <String fx:value="label" />
+                        <String fx:value="increment-button" />
+                        <String fx:value="filler" />
+                        <String fx:value="decrement-button" />
+                        <String fx:value="column-header-background" />
+                        <String fx:value="column-header" />
+                     </styleClass>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="129.0" layoutY="221.0" prefHeight="25.0" prefWidth="110.0" text="Money Type " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="256.0" prefHeight="25.0" prefWidth="157.0" text="Unit Selling Price" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="294.0" prefHeight="25.0" prefWidth="157.0" text="Unit getting Price" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="132.0" layoutY="356.0" onAction="#onActionSave" prefHeight="33.0" prefWidth="724.0" style="-fx-background-color: #b51313;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="moneyType" layoutX="391.0" layoutY="213.0" onKeyReleased="#onActionMoneyType" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/currencyStoreFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="unitSellingPrice" layoutX="393.0" layoutY="248.0" onKeyReleased="#onActionUnitSellingPrice" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/currencyStoreFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="unitGettingPrice" layoutX="393.0" layoutY="282.0" onKeyReleased="#onActionUnitGettingPrice" prefHeight="25.0" prefWidth="396.0" styleClass="txtField" stylesheets="@../style/currencyStoreFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></JFXTextField>
+      <Label layoutX="124.0" layoutY="170.0" prefHeight="25.0" prefWidth="224.0" text="Currency Information" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="190.0" layoutX="23.0" layoutY="38.0">
+         <image>
+            <Image url="@../assert/TimeStamp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dateAndTime" layoutX="29.0" layoutY="44.0" prefHeight="41.0" prefWidth="177.0" style="-fx-background-color: #171821; -fx-background-radius: 5; -fx-alignment: Center;" text="Thurstday 16:01" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

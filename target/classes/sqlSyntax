@@ -1,0 +1,143 @@
+create table customer(
+    customer_id      varchar(10) primary key,
+    customer_name    varchar(50) not null,
+    customer_contact varchar(10) null,
+    user_id          varchar(10) not null,
+    constraint foreign key (user_id) references user (user_id)
+);
+
+create table user(
+    user_id             varchar(10)               primary key,
+    user_name           varchar(10)               unique not null,
+    password            varchar(10)               unique not null,
+    Type                enum ('Manager', 'Admin') not null,
+    employee_id         varchar(10)                       ,
+    constraint foreign key (employee_id ) references employee (employee_id )
+
+);
+
+create table money(
+    money_id varchar(10)               primary key,
+    money_type varchar(50)             unique not null,
+    unit_selling_price decimal (10,2)  not null,
+    unit_getting_price decimal (10,2)  not null,
+    qty_on_hand        decimal (12,2)
+);
+
+create table changes(
+    payment_id  varchar(10)    not null ,
+    customer_id varchar(10)    not null ,
+    money_id    varchar(10)    not null ,
+    qty         int            not null ,
+    unit_price decimal(10,2)  not null ,
+    date        date           not null ,
+    constraint foreign key (customer_id) references customer (customer_id),
+    constraint foreign key (money_id) references money (money_id)
+);
+
+create table orders(
+    order_id    varchar(10)   primary key,
+    order_date  date          not null   ,
+    customer_id varchar(10)              ,
+    constraint foreign key (customer_id) references customer (customer_id)
+);
+
+create table item(
+    item_code    varchar(10)      primary key,
+    item_type    varchar(100)     not null   ,
+    qty_on_hand  int              not null   ,
+    unit_price   decimal (10,2)   not null   ,
+    image        varchar(100)     null
+);
+
+create table order_details(
+    qty             int             not null,
+    item_price      decimal (10,2)  not null,
+    item_code       varchar(10)             ,
+    order_id        varchar(10)             ,
+    constraint foreign key (item_code) references item   (item_code),
+    constraint foreign key (order_id)  references orders (order_id)
+);
+
+create table bill_payment(
+    payment_id          varchar(10)                                     primary key,
+    bill_owner_name     varchar(50)                                     not null   ,
+    bill_type           enum ('Water','Electric','Telecommunication')   not null   ,
+    company_name        enum ('Water Board', 'CBL', 'Lecho', 'Dialog', 'Mobitel', 'Airtel', 'Hutch') not null,
+    reference_no        varchar(20)                                     not null   ,
+    payment_date        date                                            not null   ,
+    customer_id         varchar(10)                                     not null   ,
+    user_id             varchar(10)                                     not null   ,
+    payment             decimal(10, 2)                                  not null   ,
+    constraint foreign key (user_id) references user (user_id),
+    constraint foreign key (customer_id) references customer (customer_id)
+);
+
+create table employee(
+    employee_id         varchar(10)                                     primary key ,
+    employee_name       varchar(100)                                    not null    ,
+    employee_contact_no varchar(10)                                     not null    ,
+    employee_email      varchar(50)                                     not null    ,
+    employee_type       enum ('Postmen','Head post Master','Assistance Post Master','Deputy Post Master','Post Assistance','Financial Assistance','User')
+);
+
+create table postMan(
+    postman_id      varchar(10)                                             primary key,
+    post_area       enum('Kalutara','katukurunda','Aillapperuma''Kalamulla', 'Kalutara North') not null,
+    vehicle_No      varchar(20)                                             not null unique ,
+    vehicle_type    enum('Van','Bike','ThreeWheel','PaddleBike','Lorry')    not null,
+    employee_id     varchar(10),
+    constraint foreign key (employee_id) references employee (employee_id)
+);
+
+create table mails(
+    postman_id          varchar(10),
+    mail_id             varchar(10)       primary key,
+    senders_name        varchar(50)       not null,
+    sender_address      varchar(100)      not null,
+    send_date           date              not null,
+    receiver_name       varchar(50)       not null,
+    receivers_address   varchar(100)      not null,
+    receive_date        date,
+    mail_type           enum('International','Local'),
+    constraint foreign key (postman_id) references postMan (postman_id)
+);
+
+create table ems_parcel_service(
+    weight_id                   varchar(10)       primary key,
+    weight_range                varchar(50)       not null,
+    type         enum ('Local', 'International') not null,
+    unit_price                  decimal(10,2)     not null
+);
+
+create table ems_parcel(
+    postman_id           varchar(10),
+    customer_id          varchar(10),
+    user_id              varchar(10),
+    mail_id              varchar(10)       primary key,
+    senders_name         varchar(50)       not null,
+    sender_address       varchar(100)      not null,
+    send_date            date              not null,
+    receiver_name        varchar(50)       not null,
+    receivers_address    varchar(100)      not null,
+    receive_date         date,
+    receivers_contact_no varchar(10)       not null,
+    type                 enum('International','Local'),
+    weight               decimal (10,2)    not null,
+    status               enum('Deliver to nearest post office','Deliver Done','Still delivering','Deliver to air port'),
+    price                decimal(10, 2),
+    constraint foreign key (postman_id) references postMan (postman_id),
+    constraint foreign key (user_id) references user (user_id),
+    constraint foreign key (customer_id) references customer (customer_id)
+);
+
+create table parcel_order_details(
+    mail_id                     varchar(10),
+    weight_id                   varchar(10),
+    price_per_weight_range      decimal (10,2),
+    weight                 decimal(10, 2) null,
+    constraint foreign key (mail_id) references ems_parcel (mail_id),
+    constraint foreign key (weight_id) references ems_parcel_service(weight_id)
+);
+
+

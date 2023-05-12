@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="990.0" style="-fx-background-color: #080C25;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.posm.controller.ProductForm">
+   <children>
+      <Line endX="851.0" layoutX="118.0" layoutY="124.0" startX="-100.0" stroke="WHITE" />
+      <Label alignment="BOTTOM_CENTER" layoutX="799.0" layoutY="40.0" prefHeight="56.0" prefWidth="169.0" text="Product " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="41.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="26.0" layoutY="150.0" prefHeight="626.0" prefWidth="373.0" style="-fx-background-color: #21222D; -fx-background-radius: 30;">
+         <children>
+            <Label layoutX="35.0" layoutY="14.0" prefHeight="46.0" prefWidth="307.0" text="Stationary Items" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="39.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="19.0" layoutY="126.0" prefHeight="480.0" prefWidth="337.0" style="-fx-background-color: #171821; -fx-background-radius: 25;">
+               <children>
+                  <ImageView fx:id="image" fitHeight="150.0" fitWidth="184.0" layoutX="74.0" layoutY="79.0" />
+                  <Label layoutX="32.0" layoutY="259.0" prefHeight="31.0" prefWidth="79.0" text="Price   " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="300.0" prefHeight="31.0" prefWidth="156.0" text="Qty available" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="347.0" prefHeight="31.0" prefWidth="82.0" text="Image " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="save" alignment="CENTER" graphicTextGap="3.0" layoutX="25.0" layoutY="415.0" onAction="#onActionSave" prefHeight="38.0" prefWidth="291.0" style="-fx-background-color: red; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="imagePath" focusColor="WHITE" layoutX="210.0" layoutY="338.0" onAction="#onActionSetImage" onKeyReleased="#onActionCheckImg" prefHeight="27.0" prefWidth="96.0" styleClass="txtField" stylesheets="@../style/productFormStyle.css" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="itemName" alignment="CENTER" layoutX="24.0" layoutY="20.0" onKeyReleased="#onActionCheckItemName" prefHeight="38.0" prefWidth="295.0" promptText="Item Name Here" styleClass="txtField" stylesheets="@../style/productFormStyle.css">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="QtyAvailable" focusColor="WHITE" layoutX="210.0" layoutY="292.0" onKeyReleased="#onActionCheckQty" prefHeight="27.0" prefWidth="96.0" styleClass="txtField" stylesheets="@../style/productFormStyle.css" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="price" focusColor="WHITE" layoutX="209.0" layoutY="246.0" onKeyReleased="#onActionCheckPrice" prefHeight="27.0" prefWidth="96.0" styleClass="txtField" stylesheets="@../style/productFormStyle.css" unFocusColor="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="17.0" />
+                     </font>
+                  </JFXTextField>
+               </children></AnchorPane>
+            <JFXComboBox fx:id="itemComboBox" layoutX="32.0" layoutY="71.0" onAction="#onActionSetItemDetails" prefHeight="38.0" prefWidth="300.0" stylesheets="@../style/productFormStyle.css">
+               <styleClass>
+                  <String fx:value="combo-box" />
+                  <String fx:value="list-cell" />
+               </styleClass></JFXComboBox>
+         </children></AnchorPane>
+      <AnchorPane layoutX="418.0" layoutY="153.0" prefHeight="626.0" prefWidth="551.0" style="-fx-background-color: #21222D; -fx-background-radius: 30;">
+         <children>
+            <ScrollPane layoutX="4.0" layoutY="2.0" prefHeight="564.0" prefWidth="547.0" style="-fx-background-color: #080C25;">
+               <content>
+                  <GridPane fx:id="gridPane" prefHeight="157.0" prefWidth="171.0" style="-fx-background-color: #21222D;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <JFXButton fx:id="oderDetails" graphicTextGap="13.0" layoutX="337.0" layoutY="574.0" onAction="#onActionOrderDetails" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: green; -fx-background-radius: 20;" text="Item Details">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="addItem" graphicTextGap="13.0" layoutX="23.0" layoutY="574.0" onAction="#onActionAddItem" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: #3498DBFF; -fx-background-radius: 20;" text="Add Item">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <ImageView fitHeight="50.0" fitWidth="190.0" layoutX="23.0" layoutY="38.0">
+         <image>
+            <Image url="@../assert/TimeStamp.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="dateAndTime" layoutX="29.0" layoutY="44.0" prefHeight="41.0" prefWidth="177.0" style="-fx-background-color: #171821; -fx-background-radius: 5; -fx-alignment: Center;" text="Thurstday 16:01" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
